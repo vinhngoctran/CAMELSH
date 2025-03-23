@@ -74,7 +74,7 @@ Watershed0 = shaperead('Data/All_GAGES-II.shp');
 % for i=1:size(Watershed0,1)
 %     mask{i,1} = inpolygon(lon_1D,lat_1D, Watershed0(i).X(1:end-1), Watershed0(i).Y(1:end-1));
 %     mask{i,1}=find(mask{i,1}==1);
-%     if isempty(mask)
+%     if isempty(mask{i,1})
 %         [mask{i,1}, ~] = findclosestpoint(lon_1D, lat_1D, Watershed0(i).X(1:end-1), Watershed0(i).Y(1:end-1));
 %     end
 % end
